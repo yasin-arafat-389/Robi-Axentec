@@ -1,0 +1,38 @@
+.solutionSlider {
+  width: 90%;
+  height: 250px;
+}
+
+.solutionSlider > .swiper-button-prev::after {
+  color: white;
+  background: rgba(35, 36, 40, 1);
+  padding: 15px 20px;
+  margin-left: 0px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.solutionSlider > .swiper-button-next::after {
+  color: white;
+  background: rgba(35, 36, 40, 1);
+  padding: 15px 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.solutionSlider > .swiper-pagination {
+  margin: 0px;
+}
+
+.solutionSlider > .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: gray;
+}
+
+.solutionSlider > .swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}
