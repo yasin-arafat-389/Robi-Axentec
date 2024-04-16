@@ -1,0 +1,27 @@
+.blogsSlider {
+  width: 90%;
+  height: auto;
+}
+
+.blogsSlider > .swiper-button-prev::after {
+  color: white;
+  background: rgba(35, 36, 40, 1);
+  padding: 15px 20px;
+  margin-left: 0px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.blogsSlider > .swiper-button-next::after {
+  color: white;
+  background: rgba(35, 36, 40, 1);
+  padding: 15px 20px;
+  margin-right: 0px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.blogsSlider > .swiper-pagination {
+  margin: 0px;
+  display: none;
+}

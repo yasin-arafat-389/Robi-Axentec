@@ -36,7 +36,7 @@ const Attributes = () => {
               variants={variant}
               initial="initial"
               animate={animationControls}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 1 }}
             >
               Innovate,
             </motion.h1>{" "}
@@ -47,7 +47,7 @@ const Attributes = () => {
               variants={variant}
               initial="initial"
               animate={animationControls}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 1 }}
             >
               Integrate
             </motion.h1>
@@ -60,7 +60,7 @@ const Attributes = () => {
               variants={variant}
               initial="initial"
               animate={animationControls}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 1 }}
             >
               Inspire
             </motion.h1>
