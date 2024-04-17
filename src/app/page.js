@@ -1,5 +1,6 @@
 import Attributes from "@/components/Attributes/Attributes";
 import ClientPortfolio from "@/components/ClientPortfolio/ClientPortfolio";
+import Footer from "@/components/Footer/Footer";
 import SwiperCarousel from "@/components/HeroSlider/Swiper";
 import LatestInsights from "@/components/LatestInsights/LatestInsights";
 import LetsTalk from "@/components/LetsTalk/LetsTalk";
@@ -18,6 +19,7 @@ export default function Home() {
       <ClientPortfolio />
       <LatestInsights />
       <LetsTalk />
+      <Footer />
     </div>
   );
 }
