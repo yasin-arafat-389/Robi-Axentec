@@ -110,7 +110,9 @@ const ClientPortfolio = () => {
                   <div
                     key={index}
                     className={`${
-                      activeTab === index ? "block" : "hidden"
+                      activeTab === index
+                        ? "block opacity-100 duration-200"
+                        : "w-0 h-0 opacity-0"
                     } text-gray-700`}
                   >
                     <div className="flex gap-6 w-[90%] mx-auto">

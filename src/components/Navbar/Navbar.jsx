@@ -4,14 +4,35 @@ import Image from "next/image";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import "./Navbar.css";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [scrollBackground, setScrollBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setScrollBackground(true);
+      } else {
+        setScrollBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
-      className="fixed w-full top-0 z-50"
+      className={`fixed w-full top-0 z-50`}
       style={{
-        background:
-          "linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.25) 46.32%, #000000 100%)",
+        background: scrollBackground
+          ? "#000"
+          : "linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.25) 46.32%, #000000 100%)",
       }}
     >
       <div className="w-[95%] mx-auto flex justify-between">
