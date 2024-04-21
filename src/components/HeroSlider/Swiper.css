@@ -36,3 +36,17 @@
   height: 12px;
   background: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper {
+    height: 400px;
+  }
+}
