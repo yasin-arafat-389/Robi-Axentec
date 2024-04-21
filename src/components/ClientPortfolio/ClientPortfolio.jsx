@@ -84,14 +84,14 @@ const ClientPortfolio = () => {
             Products & Services
           </h1>
 
-          <span className="text-white text-[16px] font-normal text-center flex w-[630px] mx-auto">
+          <span className="text-white text-[16px] font-normal text-center flex w-[300px] md:w-[630px]  mx-auto">
             The facts of our service and solution provider can vary based on the
             specific company, its offerings, and its market focus.
           </span>
 
           <div className="mt-14">
             <div className="flex flex-col items-center">
-              <div className="flex">
+              <div className="flex w-[400px] md:w-auto overflow-x-auto md:overflow-hidden">
                 {tabs.map((item, index) => (
                   <button
                     key={index}

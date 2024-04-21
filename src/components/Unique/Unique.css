@@ -1,4 +1,4 @@
-@keyframes fadeInUp {
+@keyframes uniqueFadeEffect {
   from {
     opacity: 0;
     transform: translateY(200px);
@@ -9,6 +9,6 @@
   }
 }
 
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease forwards;
+.unique-fadeEffect {
+  animation: uniqueFadeEffect 0.8s ease forwards;
 }

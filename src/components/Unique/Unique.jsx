@@ -13,10 +13,8 @@ const Unique = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setIsOnScreen(true);
-        console.log("listening");
       } else {
         setIsOnScreen(false);
-        console.log("not listening");
       }
     });
   };
@@ -59,7 +57,7 @@ const Unique = () => {
         <div className="w-full h-full relative flex justify-end items-center">
           <div
             className={`content w-[50%] px-20 ${
-              isOnScreen && "animate-fadeInUp"
+              isOnScreen && "unique-fadeEffect"
             }`}
           >
             <h1 className="text-[40px] font-bold">What makes us unique?</h1>
@@ -82,7 +80,7 @@ const Unique = () => {
           </div>
 
           <div
-            className={`absolute image w-full h-full  left-0  ${
+            className={`absolute w-full h-full  left-0  ${
               isOnScreen ? "top-[26%]" : "top-0"
             } overflow-hidden transition-all duration-700`}
           >
