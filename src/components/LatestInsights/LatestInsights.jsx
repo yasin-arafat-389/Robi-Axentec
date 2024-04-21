@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./LatestInsights.css";
 import Image from "next/image";
 import { Pagination, Navigation } from "swiper/modules";
+import { useEffect, useState } from "react";
 
 const LatestInsights = () => {
   let blogs = [
@@ -51,6 +52,26 @@ const LatestInsights = () => {
     },
   ];
 
+  const [slidesPerView, setSlidesPerView] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesPerView(1);
+      } else {
+        setSlidesPerView(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="bg-black">
       <div className="pt-20">
@@ -67,7 +88,7 @@ const LatestInsights = () => {
       {/* Blog Slider */}
       <div className="pt-5">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={slidesPerView}
           spaceBetween={30}
           loop={true}
           pagination={{

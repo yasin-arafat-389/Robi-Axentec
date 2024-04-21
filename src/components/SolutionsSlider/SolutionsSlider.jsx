@@ -4,6 +4,7 @@ import "./SolutionsSlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const SolutionsSlider = () => {
   let services = [
@@ -41,16 +42,36 @@ const SolutionsSlider = () => {
     },
   ];
 
+  const [slidesPerView, setSlidesPerView] = useState(7);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesPerView(2);
+      } else {
+        setSlidesPerView(7);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="bg-black">
-      <div className="pt-28">
-        <h1 className="text-[42px] font-bold text-white text-center">
+      <div className="pt-16 md:pt-28">
+        <h1 className="text-[30px] md:text-[42px] font-bold text-white text-center">
           Solutions Spotlight for Industries
         </h1>
 
         <div>
           <Swiper
-            slidesPerView={7}
+            slidesPerView={slidesPerView}
             loop={true}
             pagination={{
               clickable: true,

@@ -56,13 +56,15 @@ const Unique = () => {
 
         <div className="w-full h-full relative flex justify-end items-center">
           <div
-            className={`content w-[50%] px-20 ${
+            className={`content w-[100%] md:w-[50%] px-10 md:px-20 ${
               isOnScreen && "unique-fadeEffect"
             }`}
           >
-            <h1 className="text-[40px] font-bold">What makes us unique?</h1>
+            <h1 className="text-[30px] md:text-[40px] font-bold">
+              What makes us unique?
+            </h1>
 
-            <p className="text-[20px] font-normal my-8">
+            <p className="text-[18px] md:text-[20px] font-normal my-8">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s,
@@ -82,7 +84,7 @@ const Unique = () => {
           <div
             className={`absolute w-full h-full  left-0  ${
               isOnScreen ? "top-[26%]" : "top-0"
-            } overflow-hidden transition-all duration-700`}
+            } overflow-hidden transition-all duration-700 hidden md:flex`}
           >
             <Image
               src={"/why.jpg"}

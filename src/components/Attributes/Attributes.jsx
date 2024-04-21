@@ -30,7 +30,7 @@ const Attributes = () => {
     <div className="bg-black" ref={ref}>
       {/* Slide attributes */}
       <div className="w-[80%] mx-auto py-10 group">
-        <div className="flex text-[96px] font-bold text-white transition-transform duration-500 group-hover:translate-x-[60px]">
+        <div className="flex text-[30px] md:text-[96px] font-bold text-white transition-transform duration-500 group-hover:translate-x-[60px]">
           <div className="overflow-hidden">
             <motion.h1
               variants={variant}
@@ -54,7 +54,7 @@ const Attributes = () => {
           </div>
         </div>
 
-        <div className="flex justify-end text-[96px] font-bold text-white">
+        <div className="flex justify-end text-[30px] md:text-[96px] font-bold text-white">
           <div className="overflow-hidden transition-transform duration-500 group-hover:translate-x-[-60px]">
             <motion.h1
               variants={variant}
@@ -70,7 +70,7 @@ const Attributes = () => {
 
       {/* Attributes Card */}
       <div className="w-[95%] mx-auto">
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Card 1 */}
           <div className="attrCard h-[460px] w-full relative overflow-hidden group">
             <Image
@@ -89,7 +89,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -123,7 +123,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -153,7 +153,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -187,7 +187,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -217,7 +217,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -251,7 +251,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -285,7 +285,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense
@@ -315,7 +315,7 @@ const Attributes = () => {
                 needs
               </h1>
 
-              <div className="mt-5 translate-x-[300px] group-hover:translate-x-[0px] duration-700">
+              <div className="mt-5 translate-x-[400px] group-hover:translate-x-[0px] duration-700">
                 <h1 className="text-[16px] font-medium text-white">
                   A global retailer and Accenture co-created a multiyear
                   inclusion and diversity strategy to facilitate a greater sense

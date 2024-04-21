@@ -31,7 +31,7 @@ const ClientPortfolio = () => {
   return (
     <div className="bg-black">
       <div>
-        <h1 className="text-[42px] font-bold text-center text-white">
+        <h1 className="text-[35px] md:text-[42px] font-bold text-center text-white">
           Discover our client portfolio
         </h1>
 
@@ -80,11 +80,11 @@ const ClientPortfolio = () => {
             <span className="w-11 h-[1px] bg-white"></span>
           </div>
 
-          <h1 className="text-white text-[42px] font-bold text-center my-3">
+          <h1 className="text-white text-[30px] md:text-[42px] font-bold text-center my-3">
             Products & Services
           </h1>
 
-          <span className="text-white text-[16px] font-normal text-center flex w-[300px] md:w-[630px]  mx-auto">
+          <span className="text-white text-[14px] md:text-[16px] font-normal text-center flex w-[300px] md:w-[630px]  mx-auto">
             The facts of our service and solution provider can vary based on the
             specific company, its offerings, and its market focus.
           </span>
@@ -95,7 +95,7 @@ const ClientPortfolio = () => {
                 {tabs.map((item, index) => (
                   <button
                     key={index}
-                    className={`py-4 px-6 text-white focus:outline-none text-[24px] font-medium ${
+                    className={`py-4 px-6 text-white focus:outline-none text-[17px] md:text-[24px] font-medium ${
                       activeTab === index ? "border-b-2 border-white" : ""
                     }`}
                     onClick={() => handleTabClick(index)}
@@ -117,7 +117,7 @@ const ClientPortfolio = () => {
                   >
                     <div className="flex gap-6 w-[90%] mx-auto">
                       <div
-                        className="leftPart w-1/2 flex flex-col gap-10 py-10 px-8 rounded-2xl"
+                        className="leftPart w-full md:w-1/2 flex flex-col gap-10 py-10 px-8 rounded-2xl"
                         style={{
                           background:
                             "linear-gradient(212.4deg, #4D00B0 6.5%, #3D0059 92.31%)",
@@ -220,7 +220,7 @@ const ClientPortfolio = () => {
                         </div>
                       </div>
 
-                      <div className="rightPart w-1/2">
+                      <div className="rightPart w-1/2 hidden md:flex">
                         <img
                           src="heroImage.jpg"
                           alt=""

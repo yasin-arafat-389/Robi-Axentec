@@ -25,3 +25,17 @@
   margin: 0px;
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .blogsSlider {
+    width: 90%;
+    height: 470px;
+  }
+
+  .blogsSlider > .swiper-pagination {
+    margin: 0px;
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}
