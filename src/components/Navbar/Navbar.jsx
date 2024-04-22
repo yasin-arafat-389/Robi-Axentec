@@ -6,6 +6,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import MobileNav from "../ResponsiveComponents/MobileNav/MobileNav";
+import { FaLocationArrow } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+import { IoDocumentText } from "react-icons/io5";
+import { FaBug } from "react-icons/fa6";
+import { PiDiamondsFourFill } from "react-icons/pi";
 
 const Navbar = () => {
   const [scrollBackground, setScrollBackground] = useState(false);
@@ -27,6 +32,12 @@ const Navbar = () => {
     };
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <div
@@ -38,7 +49,7 @@ const Navbar = () => {
         }}
       >
         <div className="w-[95%] mx-auto flex justify-between">
-          <div>
+          <div className="flex items-center">
             <Image
               src={"/logo.png"}
               width={128}
@@ -50,14 +61,14 @@ const Navbar = () => {
 
           <div>
             <ul className="flex gap-10">
-              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-5 abiss">
+              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-8 abiss">
                 <div className="text-white flex gap-2 items-center">
                   <a className="font-medium text-[16px]">About Us</a>
                   <IoIosArrowDown />
                 </div>
                 <div className="group-hover:block dropdown-menu absolute hidden h-auto">
                   <ul
-                    className="relative top-[22px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
+                    className="relative top-[33px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
                     style={{
                       background: "rgba(0, 0, 0, 0.5)",
                       backdropFilter: "blur(37.5px)",
@@ -82,7 +93,7 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-5 abiss">
+              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-8 abiss">
                 <div className="text-white flex gap-2 items-center">
                   <a className="font-medium text-[16px]">
                     Products and services
@@ -91,7 +102,7 @@ const Navbar = () => {
                 </div>
                 <div className="group-hover:block dropdown-menu absolute hidden h-auto">
                   <ul
-                    className="relative top-[22px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
+                    className="relative top-[33px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
                     style={{
                       background: "rgba(0, 0, 0, 0.5)",
                       backdropFilter: "blur(37.5px)",
@@ -116,14 +127,14 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-5 abiss">
+              <li class="group relative dropdown cursor-pointer font-bold text-base tracking-wide py-8 abiss">
                 <div className="text-white flex gap-2 items-center">
                   <a className="font-medium text-[16px]">Newsroom</a>
                   <IoIosArrowDown />
                 </div>
                 <div className="group-hover:block dropdown-menu absolute hidden h-auto">
                   <ul
-                    className="relative top-[22px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
+                    className="relative top-[33px] bg-green-500 shadow p-6 w-[200px] rounded-lg"
                     style={{
                       background: "rgba(0, 0, 0, 0.5)",
                       backdropFilter: "blur(37.5px)",
@@ -153,11 +164,11 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li className="text-white font-medium text-[16px] cursor-pointer py-5">
+              <li className="text-white font-medium text-[16px] cursor-pointer py-8">
                 Contact Us
               </li>
 
-              <li className="text-white font-medium text-[16px] cursor-pointer py-5">
+              <li className="text-white font-medium text-[16px] cursor-pointer py-8">
                 Career
               </li>
             </ul>
@@ -182,6 +193,89 @@ const Navbar = () => {
           <MobileNav />
         </div>
       </div>
+
+      <button
+        style={{
+          transform: "rotate(-90deg) translate(50%, -50%)",
+          transformOrigin: "100% 50%",
+        }}
+        onClick={togglePopup}
+        class="fixed top-1/2 right-0 transform -translate-y-1/2 bg-[#5B3FE0] text-white px-4 py-2 rounded-t-lg z-[500]"
+      >
+        <div className="flex gap-2 items-center">
+          <FaLocationArrow
+            style={{
+              transform: "rotate(45deg)",
+            }}
+          />
+
+          <h1>Feedback</h1>
+        </div>
+      </button>
+
+      {isOpen && (
+        <>
+          <div
+            onClick={togglePopup}
+            className="fixed inset-0 z-[400]"
+            style={{ background: "rgba(128, 144, 160, .7)" }}
+          ></div>
+
+          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-[500]">
+            <div className="flex justify-end m-5">
+              <button>
+                <RxCross2 className="text-xl" onClick={togglePopup} />
+              </button>
+            </div>
+
+            {/* Feedback option 1 */}
+            <div className="flex justify-center items-center gap-5 m-5">
+              <div className="border border-[#ACBDCE] p-2 w-[40px] h-[40px] rounded-full">
+                <IoDocumentText className="text-[#ACBDCE] text-2xl" />
+              </div>
+
+              <div>
+                <h1>General Feedback</h1>
+                <p className="text-[#ACBDCE] text-[14px]">
+                  Give general feedback of this page
+                </p>
+              </div>
+            </div>
+
+            {/* Feedback option 2 */}
+            <div className="flex items-center gap-5 m-5">
+              <div className="border border-[#ACBDCE] p-2 w-[40px] h-[40px] rounded-full">
+                <FaBug className="text-[#ACBDCE] text-2xl" />
+              </div>
+
+              <div>
+                <h1>Report a bug</h1>
+                <p className="text-[#ACBDCE] text-[14px]">
+                  Let us know {`what's`} broken
+                </p>
+              </div>
+            </div>
+
+            {/* Feedback option 3 */}
+            <div className="flex items-center gap-5 m-5">
+              <div className="border border-[#ACBDCE] p-2 w-[40px] h-[40px] rounded-full">
+                <PiDiamondsFourFill className="text-[#ACBDCE] text-2xl" />
+              </div>
+
+              <div>
+                <h1>Feature Request</h1>
+                <p className="text-[#ACBDCE] text-[14px]">
+                  Tell us how we can improve.
+                </p>
+              </div>
+            </div>
+
+            <h1 className="text-[#ACBDCE] text-[14px] text-center pb-5 cursor-pointer hover:text-black">
+              Powered by Userback
+            </h1>
+          </div>
+        </>
+      )}
     </>
   );
 };
