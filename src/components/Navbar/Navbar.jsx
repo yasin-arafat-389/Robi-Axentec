@@ -270,7 +270,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <h1 className="text-[#ACBDCE] text-[14px] text-center pb-5 cursor-pointer hover:text-black">
+            <h1 className="text-[#ACBDCE] text-[14px] text-center pb-5 cursor-pointer hover:text-blackgit add .">
               Powered by Userback
             </h1>
           </div>
